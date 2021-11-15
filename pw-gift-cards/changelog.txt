@@ -1,0 +1,242 @@
+1.245 - Added the Romanian (ro_RO) translation. Added the Portuguese (pt_PT) translation. Fixes a potential issue with order totals not being recalculated correctly resulting in an error with some payment gateways.
+1.244 - Fixed issue when using a gift card number that contains a backslash.
+1.243 - Fixed an issue viewing details of a gift card number that contains a backslash.
+1.242 - Improved French translation. In the Create Gift Cards Admin area, clear the form after the cards are created to prevent accidentally creating duplicates.
+1.241 - Fixed an issue with PayPal payments where Tax might be calculated again at PayPal.
+1.240 - A few more fixes for compatibility with WOOCS - WooCommerce Currency Switcher plugin by realmag777. Removed the need for the PWGC_WOOCS_PATCH flag.
+1.239 - Fixed an issue with custom amounts when using the WOOCS - WooCommerce Currency Switcher plugin by realmag777.
+1.238 - Fixed an issue with clearing the Expiration Date from the admin area on some database collations.
+1.237 - Fixed an issue with the transaction details on the Check Balance page when used in conjunction with the WOOCS - WooCommerce Currency Switcher plugin by realmag777.
+1.236 - Added a wp-config flag (PWGC_WOOCS_PATCH) that can be enabled to fix an issue with the amount displayed in the gift card email on certain systems when used in conjunction with the WOOCS - WooCommerce Currency Switcher plugin by realmag777.
+1.235 - Fixed an issue with the amount displayed in the dropdown menu when used in conjunction with the WOOCS - WooCommerce Currency Switcher plugin by realmag777.
+1.234 - Fixed an issue with the transaction details on the Check Balance page when used in conjunction with the WOOCS - WooCommerce Currency Switcher plugin by realmag777.
+1.233 - Added a new Setting where you can have the plugin automatically remove the gift card from the session after the order is placed.
+1.232 - To prevent confusion, make the quantity field read only in the cart when ordering a gift card for multiple recipients.
+1.231 - Added a new hook (pwgc_gift_card_blocked) that will allow programmatically blocking gift cards from being redeemed.
+1.230 - Added compatibility for the Multi-Currency for WooCommerce by TIV.NET INC plugin. Confirmed compatibility with WooCommerce v4.3
+1.229 - Added the $product parameter to the pwgc_select_amount_text filter.
+1.228 - Email address is no longer required when the Physical Gift Card option is checked. If blank, then no gift card will be generated. This is useful when you have pre-printed gift cards that were imported and you do not want a new number generated.
+1.227 - Fixed a fatal error from the previous release.
+1.226 - Translate the expiration date on the Preview email.
+1.225 - A recent update may have caused issues with the Add To Cart button not working if you have the Apply Theme Fix option checked. This update reverts the change when the Apply Theme Fix option is enabled we allowed the woocommerce_before_add_to_cart_quantity hook instance to be called multiple times for themes that do this incorrectly. Now you must set PWGC_BEFORE_ADD_TO_CART_QUANTITY_FIX for the sites that are having trouble with this issue.
+1.224 - Fixed a warning when using the Advanced Dynamic Pricing plugin when a gift card is being redeemed.
+1.223 - Verified compatibility with WooCommerce v4.2.0
+1.222 - Fixed a warning when using the Advanced Dynamic Pricing plugin when a gift card is being redeemed.
+1.221 - To fix an issue with certain themes, when the Apply Theme Fix option is enabled we no longer remove the woocommerce_before_add_to_cart_quantity hook instance after it is called.
+1.220 - Updated translations.
+1.219 - Fixed an issue with quotation marks being used on the Create Gift Card page.
+1.218 - Hide the Apply Gift Card field whenever the option to allow buying of gift cards with gift cards is disabled.
+1.217 - Added a new hook (pwgc_gift_card_meta) to be able to add additional values to the gift_card_meta array.
+1.216 - Previously, the setting for Send When Order Received would only send the gift card once the order was Processing. Now it will send immediately after the order is created which is how this setting was intended.
+1.215 - Add a link to the Check Balance page under the My Account menu. Can be turned off under Settings.
+1.214 - Refund a redeemed gift card on orders with a Failed status.
+1.213 - Added support for the Order Minimum/Maximum Amount for WooCommerce plugin by Algoritmika Ltd.
+1.212 - Fixed an issue where the buttons on new rows did not work when you had to click View More in the admin dashboard.
+1.211 - Added additional error checks when inserting a gift card into the database.
+1.210 - Fixed a conflict with the Advanced Dynamic Pricing plugin by AlgolPlus.
+1.209 - Added a new option to turn off populating the From field automatically. Fixed an issue with the French translation. To avoid confusion, we now display a message in the Order Admin area when an order contains a gift card and it is not yet marked Complete. The message appears as an Order Item Meta entry.
+1.208 - Added a new option to disable multiple recipient email addresses when purchasing a gift card.
+1.207 - Added a new setting to completely hide the Expiration Date field for countries where it isn't applicable. Show an error if Other Amount is empty rather than just relying on browser-side validation.
+1.206 - Updated the plugin title in the loco.xml file. Confirmed compatibility with WordPress 5.5. Added an error message due to a conflict with Advanced Dynamic Pricing plugin. Will remove the message when the conflict has been resolved by the developer of that plugin.
+1.205 - Confirmed compatibility with WordPress 5.5. Added an error message due to a conflict with Advanced Dynamic Pricing plugin. Will remove the message when the conflict has been resolved by the developer of that plugin.
+1.204 - When the Aelia Currency Switcher plugin is installed the currency shown for manually created gift cards was not being set to the store default currency, which has been fixed.
+1.203 - Removed the !important flag from the subtitle text template on the add to cart form.
+1.202 - Added a new filter to be able to prevent gift cards from being redeemed using custom code: pwgc_gift_card_can_be_redeemed
+1.201 - Added a new feature to be able to permanently delete a gift card that was previously soft-deleted. The Delete Permanently button will appear when you search for deleted (inactive) cards in the dashboard.
+1.200 - Fixed a few issues on sites with a comma for decimal place when using Custom Amounts or making Adjustments in the admin area.
+1.199 - Fixed a few issues on sites with a comma for decimal place when using Custom Amounts or making Adjustments in the admin area.
+1.198 - Prevent the Pro version from being activated while the Free version is still active. Fixed an issue where allowing Custom Amounts on sites with a comma for decimal place would only allow whole dollar amounts.
+1.197 - Added an option to show the gift card activity transactions on the Check Balance page.
+1.196 - Confirmed compatibility with WooCommerce v4.1
+1.195 - Finnish translation files were named incorrectly and this has been fixed.
+1.194 - Added Finnish translation. Small bug fix with Variation Swatches compatibility.
+1.193 - Fixed an issue where the default Design would always be used on the gift card email regardless of the Design that was selected for the product.
+1.192 - Compatibility with YITH Color and Label Variations for WooCommerce.
+1.191 - Fixed a potential crash if the Cart is null when checking for a bonus gift card.
+1.190 - Fixed a few translation issues with the German and Dutch translations.
+1.189 - Fixed a conflict with the 'WooCommerce AvaTax' plugin by SkyVerge.
+1.188 - Fixed a conflict with the 'MPesa For WooCommerce' plugin by Osen Concepts Kenya.
+1.187 - Added support for the Preview Emails for WooCommerce plugin by Digamber Pradhan.
+1.186 - When sending a preview email from the Designer, remember the last email address used for the current session. Prevent possible error condition when sending gift card emails.
+1.185 - Added a new setting to allow gift cards to be debited directly from the Check Balance page. This is useful for physical stores where customers bring in a card to redeem in person. Updated translations for new feature.
+1.184 - Added a new setting to allow gift cards to be debited directly from the Check Balance page. This is useful for physical stores where customers bring in a card to redeem in person.
+1.183 - Added additional hooks to the 'Apply Theme Fix' option to make this option work in even more situations.
+1.182 - Confirmed compatibility with WordPress 5.4
+1.181 - Updated the Expiration Date field on the Check Balance page so that it is translated to the appropriate language when displayed. Fixed a small issue with the woocommerce_email_footer hook. Removed the foreign key constraint on the Activity table since it can cause problems on some installations.
+1.180 - Added support for the plugin WooCommerce Price Based on Country by Oscar Gare.
+1.179 - Deduct the gift card balance immediately when an order is received for payment types such as Direct Bank Transfer.
+1.178 - Added support for macOS style line endings in the imported CSV file. Fixed issue that was preventing adding gift card to the cart directly from the URL. Added a checkbox to the Import process to send the gift card email to the optional recipient.
+1.177 - Confirmed compatibility with WordPress 5.3.2 and WooCommerce 4.0.0
+1.176 - Fixed an issue with the Brazilian Portuguese translation.
+1.175 - Fixed an issue where custom Attributes added to the gift card product might be lost when updating the Gift Card product.
+1.174 - Added a new feature to show gift card balances as of a specific date. Go to Settings to enable this new feature which will add a field to the Gift Card Balances page in the admin area.
+1.173 - Fixed a display issue with the price when using the WooCommerce Currency Switcher plugin by realmag777.
+1.172 - Fixes a bug in the 'WooCommerce PDF Invoice Builder' plugin by RedNao that causes gift card emails not to be sent.
+1.171 - Show the Attributes tab in the admin area in case you want to add custom attributes to the Gift Card product.
+1.170 - Changed the default value of PWGC_FORCE_PLUGIN_I18N to make it easier to customize translations. Fixed a potential issue with loading Javascript on the Checkout page for certain themes.
+1.169 - Fixed an issue with the Other Amount with comma for decimal place and period for thousands separator.
+1.168 - Fixed an issue that made Other Amount disappear. Edit the product and click the Update button to apply the fix after upgrading. Changed the JavaScript init so gift cards will work even on sites that have JavaScript errors from other plugins.
+1.167 - Allow today's date to be selected in the calendar to avoid confusion over immediate delivery. Fixed an issue when multiple gift cards are ordered for different people in the same order that some of the data could be mixed up. Fixed issue with Format Prices option with comma as decimal separator.
+1.166 - Automatically show the active gift cards when the dashboard is first opened instead of having to click the Search button. The View Activity button is now a toggle button to show/hide the activity. Fixed a bug where the Balance cell would not immediately show the update after performing an Adjust Balance action. Fixed a potential issue with translations.
+1.165 - Fixed an issue where the Recipient email would not be shown when creating a gift card from the admin area. Translate the Expiration Date. Made the gift card fields compatible with even more themes. Fix for a bug with the Antive Toolkit plugin used by some themes.
+1.164 - Fixed an issue where the chosen design for a gift card product might not be used when there are multiple different gift card products with different designs.
+1.163 - Show the Sold Individually checkbox on the Inventory tab to allow setting this for gift cards. Set width of gift card email to 500px in the template. Confirmed compatibility with the upcoming WooCommerce v3.9.0
+1.162 - Added a dismiss button to the PayPal IPN / PDT bug warning message.
+1.161 - Fixed an issue with the updater that may return Reached Maximum Domains message after moving domains.
+1.160 - Fix a display issue when the Gift Card variation has a Sale Price set.
+1.159 - Detect a condition with the PayPal payment gateway that could cause an extra gift card to be generated when the order is marked Complete.
+1.158 - Improved the license manager so that if you deactivate the plugin it will automatically release the license key.
+1.157 - Tweaked the CSS for the gift card product fields to make them more compatible with a variety of themes. Gift card email is sent translated to the Order language whenever WPML is installed. Populate the recipient email field for gift cards that were created with the free version.
+1.156 - Show the General tab so that Tax Status can be set if desired.
+1.155 - Rolled back a change to the product admin page that might interfere with other product types.
+1.154 - Added new option to end the gift card when the order is received rather than waiting until it is Complete. Deactivate gift cards when the Order is moved to trash. Show the Inventory and Variations tabs so that SKU can be set. Show General tab so Tax Status can be set. Improved Spanish translation. Small bug fixes.
+1.153 - Improved the template override detection code.
+1.152 - Fixed a small bug with saving special characters in the gift card title text. Refresh balance summary after manually creating gift cards or importing numbers.
+1.151 - Added an option to blind carbon copy the purchasing customer on the gift card email.
+1.149 - New option to prevent gift cards from being input using the Coupon Code field. New option to Cc or Bcc email addresses on gift card emails. Designer now includes a Redeem URL setting for custom landing pages. Improved performance of the gift card search in the admin area. Show a wait indicator while bulk creating gift cards in the admin area. Fixed a bug where max message length was not always honored.
+1.148 - Fixed a bug that prevents designs from being saved on certain systems.
+1.147 - Updated location of default design hook to allow broader customization.
+1.146 - Email Designer added. Easily customize the gift card email from within the admin area! Small bug fixes and translation improvements.
+1.145 - Email Designer added. Easily customize the gift card email from within the admin area!
+1.144 - Prevent extra bonus gift cards from being generated if the order is repeatedly moved from Processing to Complete.
+1.143 - Added a new option to award a bonus gift card based on the cumulative amount of gift cards purchased.
+1.142 - Tweaked some of the translations.
+1.141 - Recipient email is stored on the gift card object directly in the database. This improves searching and also keeps the recipient email when creating cards from the admin area.
+1.140 - Compatibility with WooCommerce TM Extra Product Options by themeComplete.
+1.139 - Added pw_gift_cards_redeemed to the Orders Rest API endpoint to see redeemed gift cards on orders. Compatibility with WooCommerce TM Extra Product Options by themeComplete.
+1.138 - When offering Bonus Gift Cards, display the Bonus amount on the order confirmation email. Also fixed a display issue with the amount on the bonus gift card email.
+1.137 - Improved performance of the admin search. Compatibility fix for the 'Variation Swatches for WooCommerce' plugin by Emran Ahmed. Ensured compatibility with the upcoming WooCommerce 3.8.0 release.
+1.136 - Fixed an issue that may make the PW Gift Cards Email not available on some systems.
+1.135 - Improved internationalization and WPML support with the Other Amount option.
+1.134 - Added the option to use the WooCommerce Transactional Email system for gift card emails.
+1.133 - Display the redeemed gift card number in the order email. Disabled the WooCommerce Transactional Email system for gift card emails.
+1.132 - Improved integration with our BOGO plugin. You can now offer eGift cards as a free gift to purchasing customers if you have our PW WooCommerce BOGO plugin installed.
+1.131 - Fix for potential issue with WordPress Multi-site installations that use a shared gift card database.
+1.130 - Fixed issue where an unreachable server may incorrectly show expired license in the admin area.
+1.129 - Fixed an issue with the license manager.
+1.128 - Internal improvements to licensing system and update manager.
+1.127 - Fixed an issue with the Ignore Coupons setting when used with percentage coupons. Fixed issue with selecting the Purchasing Customer for the Bonus Gift Card.
+1.126 - Fixed a conflict with the 'WooCommerce Extended Coupon Features PRO' plugin. Fixed an issue that could display the amount rather than the message on the gift card email.
+1.125 - Removed a potential PHP Warning from the wc_get_template function call.
+1.124 - Improved German translation.
+1.123 - Added Swedish translation. Improved German translation.
+1.122 - Added a commission option on the Gift Card product when you have PW Affiliates installed.
+1.121 - Tested for compatibility with the latest WordPress and WooCommerce versions.
+1.120 - Fixed calculation issue when fees are included.
+1.119 - Ensure that pw-gift-cards.js is loaded on the cart / checkout pages.
+1.118 - Improved compatibility with WordPress Multisite. Added config flag to share the database across sites: PWGC_MULTISITE_SHARED_DATABASE
+1.117 - Used PWGC_REQUIRES_PRIVILEGE constant instead of 'manage_woocommerce' for menu privilege. Added a new filter: pw_gift_cards_amount_attribute_visible_on_product_page.
+1.116 - Updated hooks for status changes to make it more comptaible with WooCommerce POS.
+1.115 - Improved translations for the Recipient Name field.
+1.114 - Fixed conflict in the admin area with the Better Font Awesome plugin.
+1.113 - Added a new hook to allow altering the randomly generated card numbers to do things like add a prefix. Hook: pw_gift_cards_random_card_number.
+1.112 - Fixed issue with Other Amount prompt when using the WC Variations Radio Buttons plugin by 8manos.
+1.110 - Added a few new hooks to allow greater flexibility.
+1.109 - Disable AJAX add to cart for the Rigid and OceanWP themes.
+1.108 - Deduct gift card balance in the woocommerce_pre_payment_complete hook when redeeming.
+1.107 - Added new hooks to override the default values when manually email gift cards from the admin area.
+1.106 - Fixed issue emailing gift cards from the Admin area.
+1.105 - Fixed issue with Other Amount and the Multi Currency for WooCommerce by VillaTheme.
+1.104 - Added optional Recipient Name field.
+1.103 - Fixed issue with custom amounts when using the WooCommerce Ultimate Multi Currency Suite by Dev49.net.
+1.102 - Fixed issue where Order would not be marked as Complete when a gift card is purchased along with a Virtual Downloadable product.
+1.101 - Allow translation of the Pimwick Plugins menu without causing any issues. Fixed issue with WPML when not using multicurrency.
+1.100 - Check for WPML object to prevent a warning message on some systems.
+1.99 - Fixed issue with order total when redeeming a gift card with WPML currency switcher.
+1.98 - Fixed issue where Shipping tab would be hidden for Physical Gift cards when reloading the admin page.
+1.97 - Allow the gift card code to be applied from the Coupon Code field, even when there is an Individual Use Only coupon applied.
+1.96 - Added the order object to the email template so that it can be accessed.
+1.95 - Fixed issue with using the current server time when calculating gift card delivery date.
+1.94 - Added a new hook to adjust the cron for scheduled gift card deliveries: pwgc_scheduled_start_time.
+1.93 - Fixed small issue with purchasing physical gift cards.
+1.92 - Added support for Multi Currency for WooCommerce by VillaTheme.
+1.91 - Added support for WPML WooCommerce Multi-currency. Added option to ignore coupons. Improved translations for Spanish and Danish based on user feedback.
+1.90 - Added support for WooCommerce Ultimate Multi Currency Suite by Dev49.net
+1.89 - Improved support for Polylang with Hyyan WooCommerce Polylang Integration.
+1.87 - Removed this misleading Invalid Email Address option from setup. Prevent invalid email addresses from being entered when purchasing a gift card.
+1.86 - Fixed fatal error in the admin area caused by v1.85 released earlier today.
+1.85 - Display the Shipping tab on the Gift Card product whenever Physical Product is chosen.
+1.84 - Added a new hook to change the Select Amount text on the catalog page: pwgc_select_amount_text
+1.83 - Added a new button to the admin area to allow re-sending gift cards.
+1.82 - Added a new hook to overwrite the balance check icon without overriding the entire template: pwgc_check_balance_image.
+1.81 - Fixed compatibility issue with older versions of WooCommerce Memberships plugin.
+1.80 - Added a notice when a gift card with a zero balance is added to the cart.
+1.79 - Fixed issue where Checkout page would not reload when a Gift Card number was entered into the Coupon field.
+1.78 - Added a new setting to apply a fix for themes that do not have the correct WooCommerce hooks.
+1.77 - Improved support for opting out of discounts in WooCommerce Memberships v1.12.2 and later.
+1.76 - Fixed compatibility issue with Currency Switchers on the Check Balance page. Added Danish translation.
+1.75 - Added an Enabled/Disabled option to the PW Gift Card email.
+1.74 - Fixed issue with Aelia Currency Switcher and displaying value ranges. Removed some extraneous code from the payment-method-pw-gift-card template file.
+1.73 - Added support for Aelia Currency Switcher.
+1.72 - Added $email variable to the woocommerce_email_header hook to fix compatibility with other themes and plugins such as Kadence Themes.
+1.71 - Changed ajaxurl to be relative so it will work if the front-end is not using https. Created new hook 'pwgc_balance_check_icon'.
+1.70 - Fixed potential PHP warning message when clicking Redeem button.
+1.69 - Fixed a few compatibility issues with the WooCommerce Currency Switcher plugin by realmag777.
+1.68 - Added a new hook to allow changing the eligible amount to be the Subtotal instead of Total: pwgc_eligible_cart_amount
+1.67 - Added option to specify recipient when creating or importing gift cards in the admin area.
+1.66 - Added an option to prevent gift cards from being used to purchase other gift cards. Calendar is now translatable.
+1.65 - Added {product_title} to the email template parser.
+1.64 - Fix for PayPal payment whenever amount is less than zero and shipping is the only charge.
+1.63 - Added a type check when switching from Physical to Virtual product.
+1.62 - Fixed compatibility issue with Internet Explorer 11.
+1.61 - Improved the auto-complete Order logic to not complete orders for COD and Direct Bank Transfer payment methods. Fixed issue where Delivery Date field might be hidden.
+1.60 - Added checkbox to switch an eGift card product to a Physical Gift Card in the Admin area. Disable AJAX add-to-cart on certain incompatible themes.
+1.59 - Changed the variation selector to be more compatible with other plugins.
+1.58 - Show the expiration date on the emailed gift card. Added Russian language translation files.
+1.57 - Added compatibility for WordPress Multi-Site.
+1.56 - Added support for the WooCommerce Currency Switcher plugin by realmag777.
+1.55 - Updated gift card delivery schedule to be midnight of the local site time.
+1.54 - Allow gift card numbers to be entered into the Coupon field to avoid customer confusion. Updated the template for the redeem form so that CSS styles can be applied immediately.
+1.53 - Added the ability to schedule the delivery of gift cards.
+1.52 - Prevent the gift card form from being loaded if woocommerce_before_add_to_cart_quantity is called multiple times.
+1.51 - Fixed an issue where manually creating a gift card with no expiration date would still set an expiration date.
+1.50 - Update to improve compatibility with certain themes. Updated German translation.
+1.49 - Ensure compatibility with plugins that only check for the Variable type using is_type() rather than the class.
+1.48 - Fixed an issue where entering a gift card on the Cart page might take the customer back to the homepage if permalinks are set to Plain.
+1.47 - Fixed a warning about an undefined variable when purchasing a gift card.
+1.46 - Increased timeout of license key activation and improved message output on error.
+1.45 - Fixed issue with calculation when using WooCommerce Services for automatic tax calculation.
+1.44 - Fixed issue with prices introduced in v1.43.
+1.43 - Added a hook to prevent a possible error when trying to add Custom Amount to the cart.
+1.42 - Skip blank expiration dates when importing from CSV.
+1.41 - Added the ability to delete gift cards from the admin area. Added an expiration date field to the Create Gift Card page. Added the ability to change the expiration date on gift cards in the admin area. Show an Expired message on the cart and checkout pages for expired cards. Do not show deactivated cards unless searching for them. Updated translation files.
+1.40 - Changed the 'Add more funds' link into a button. Added a product object to the email template so that product details can be added to the recipient email.
+1.39 - Added support for the plugin WooCommerce Pre-Orders from WooCommerce.com
+1.38 - Added support for variation radio buttons.
+1.37 - Fixed issue with IT and ES translations and the {sender} field in the email templates.
+1.36 - Updated for compatibility with WPML.
+1.35 - Added a setting to not display the gift card redeem field on the Cart or Checkout pages.
+1.34 - Fixed issue with translating the 'Other Amount' attribute.
+1.33 - Added the ability for customers to add funds to an existing gift card from the Check Balance page. Fixed issue with custom translations.
+1.32 - Added email address validation. Updated German language translation.
+1.31 - Fixed an issue preventing the translation of the To/From/Message fields. Added DE language translation. Fixed issue with non-logged in users redeeming gift cards automatically from the email link.
+1.30 - Fixed an issue with recurring subscription total from the WooCommerce Subscriptions plugin.
+1.29 - Fixed an issue with searching for gift cards in the admin area when there is a table collation mismatch.
+1.28 - Fixed the 'Add to Cart' text for some users.
+1.27 - Added recipient to the available fields in the email template.
+1.26 - Added a new option to disable the font awesome gift card icon on the Check Balance page.
+1.25 - Fixed issue with the Check Balance page for customers.
+1.24 - New options to specify the location of the Apply Gift Card box on the Cart and Checkout pages.
+1.23 - New feature: Search by recipient email address.
+1.22 - New features: List all Gift Cards, manually create cards, and import existing (physical) cards via CSV.
+1.21 - Fixed an issue that was preventing the email Subject and Header from being overridden in setup.
+1.20 - Fixed an issue where pw_gift_card_amount meta value was added to non-gift card order line items.
+1.19 - Updated the gift card amount shown to the recipient when purchasing for a sale price.
+1.18 - Fixed the link sent to the purchasing customer.
+1.17 - Fixed integration issue with our Black Friday plugin.
+1.16 - Added a new option to disable using WooCommerce Transactional Email system.
+1.14 - Added a Remove button to the gift card on the Checkout page.
+1.13 - Fixed compatibility with automatic tax calculations provided by WooCommerce Services.
+1.12 - Improving internationalization support. Added loco.xml to support Loco Translate. Changed the text domain from 'pimwick' to 'pw-woocommerce-gift-cards' to make translations work.
+1.11 - Added the ability to apply a gift card on the Checkout page. Fixed an issue with updating amounts.
+1.10 - Include the pimwick Text Domain to make translations easier.
+1.9 - Fixed issue with auto-creating the Gift Card product.
+1.8 - Improved compatibility for older browsers such as IE11.
+1.7 - Fixed issue when using older versions of PHP.
+1.6 - Fixed issue with removing all default amounts and re-adding.
+1.5 - Added PW Gift Cards under WooCommerce -> Settings -> Products. New option to disable the feature that auto-completes gift card only orders. Moved the (optional) flag to the title instead of the placeholder for the Message field.
+1.4 - Minor bug fixes.
+1.3 - Added .pot file for translation support.
+1.2 - Fixed an issue where shipping is the only charge sent to PayPal.
+1.1 - Added the ability to leave notes and make manual adjustments on gift cards.
+1.0 - Initial Version.
